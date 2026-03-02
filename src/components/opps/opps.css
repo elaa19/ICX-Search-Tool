@@ -1,121 +1,180 @@
-
 .opportunities {
-    padding: 2rem;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-  }
-  
-  .opportunities h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #1b1b1b;
-  }
-  
-  /* Container for the cards */
+  padding: 2rem;
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  background: linear-gradient(145deg, #f1f4f9 0%, #f9fafc 100%);
+}
+
+.opportunities h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #0b1e33;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.03);
+}
+
+/* Container for the cards */
+.opportunity-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Individual card styling – now with reduced height */
+.opportunity-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0, 32, 64, 0.15);
+  padding: 1.2rem 1.2rem 1.5rem; /* reduced vertical padding */
+  text-align: center;
+  width: 300px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  min-height: 380px; /* controlled height – adjust as needed */
+}
+
+.opportunity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 50px -12px rgba(0, 80, 160, 0.25);
+  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Card image – smaller, more contained */
+.opportunity-image {
+  width: 120px;        /* fixed smaller size */
+  height: 120px;
+  margin: 0 auto 1rem auto;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 0.8rem;
+  box-shadow: 0 10px 20px -8px rgba(0,50,100,0.2);
+}
+
+/* Card title */
+.opportunity-card h3 {
+  font-size: 1.6rem;
+  color: #0b1e33;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Card details – tighter spacing */
+.opportunity-card p {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  line-height: 1.4;
+  margin: 0.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.2rem;
+}
+
+.opportunity-card strong {
+  color: #1b4f8b;
+  font-weight: 600;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Modern button base style */
+.opportunity-link,
+.drive-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;          /* pill shape */
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 80, 160, 0.2);
+  letter-spacing: 0.3px;
+}
+
+/* Learn More button – gradient */
+.opportunity-link {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+.opportunity-link:hover {
+  background: linear-gradient(135deg, #0066d6, #003d80);
+  box-shadow: 0 8px 18px rgba(0, 91, 187, 0.35);
+  transform: scale(1.02);
+}
+
+/* Drive button – fresh green gradient */
+.drive-link {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
+}
+
+.drive-link:hover {
+  background: linear-gradient(135deg, #218838, #146c2a);
+  box-shadow: 0 8px 18px rgba(33, 136, 56, 0.35);
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
   .opportunity-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-    gap: 2rem; /* Space between cards */
+    gap: 1.5rem;
   }
-  
-  /* Individual card styling */
   .opportunity-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    text-align: center;
-    width: 300px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 270px;
+    min-height: 360px;
   }
-  
-  .opportunity-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Card image */
-  .opportunity-image {
+}
+
+@media screen and (max-width: 768px) {
+  .opportunity-card {
     width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-    object-fit: contain;
-    border-radius: 20px;
+    max-width: 340px;
+    min-height: auto;
   }
-  
-  /* Card title */
+  .opportunity-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .opportunities h2 {
+    font-size: 2.2rem;
+  }
   .opportunity-card h3 {
-    font-size: 1.5rem;
-    color: #1b1b1b;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
   }
-  
-  /* Card details */
   .opportunity-card p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-    margin: 0.5rem 0;
+    font-size: 0.85rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
   }
-  
-  .opportunity-card strong {
-    color: #1b1b1b;
+  .button-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Learn more link */
-  .opportunity-link {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease-in-out;
+  .opportunity-link,
+  .drive-link {
+    width: 80%;
+    text-align: center;
   }
-  
-  .opportunity-link:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive Design */
-  @media screen and (max-width: 1024px) {
-    .opportunity-cards {
-      gap: 1.5rem;
-    }
-  
-    .opportunity-card {
-      width: 280px;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .opportunity-card {
-      width: 100%; /* Take full width of container on smaller screens */
-      max-width: 350px;
-      margin: 0 auto; /* Center the cards */
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .opportunities h2 {
-      font-size: 2rem;
-    }
-  
-    .opportunity-card h3 {
-      font-size: 1.2rem;
-    }
-  
-    .opportunity-card p {
-      font-size: 0.9rem;
-    }
-  
-    .opportunity-link {
-      font-size: 0.9rem;
-      padding: 0.6rem 1.2rem;
-    }
-  }
-  
+}

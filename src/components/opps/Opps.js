@@ -19,7 +19,7 @@ const Opps = () => {
       .then((csvData) => {
         Papa.parse(csvData, {
           complete: (result) => {
-            setData(result.data.filter((row) => row.Statues === "Open")); 
+            setData(result.data.filter((row) => row.Statues === "Open"));
           },
           header: true,
         });
@@ -35,36 +35,67 @@ const Opps = () => {
     "On the Map": Onthemap,
   };
 
+  // Mapping des noms de projets (clé = valeur de opportunity.PROJECT) vers les IDs des dossiers Drive
+  const driveFolderIds = {
+    "Hearltbeat": "1d8CaX5AquzX32gV2SZsX88aw_iuNBPp6",   // Heartbeat
+    "Fingerprint": "11OWnuuw5mnwsyyru-BmiPreYkHEc_7go", // Finger Print
+    "Global Classroom": "1Zw4aAqMqU3uIFwPd4GsV2q63w1Kzg3G6",
+    "Skill Up!": "1Uv-oVlphxa5rFZxX-ODrwwL4py9key1Q",   // Skill-up
+    "On the Map": "1l_co24o4f7pK3qqoq6sGsNcG0IobVWRC",  // On the map
+    "Green Leader": "15D5AcrM53Ua0wT-0EhCtp9qVjrH1rGyv",
+    "Raise your voice": "1s5ql3MgeB5SyMNQlwvMi4zp-IaH4eG5K",
+    "Scale-up": "1SYGsBb_YPInpmDXorNYdKFUYdTd-S-I4",
+    "Youth for impact": "1RYl1zLp4ZlCEEmM15sL2WezBZzDEA-WQ"
+  };
+
   return (
     <div>
       <section className="opportunities" id="opportunities">
         <h2>Opportunities</h2>
         <div className="opportunity-cards">
-          {data.map((opportunity, index) => (
-            <div className="opportunity-card" key={index}>
-              <img
-                src={opportunityImages[opportunity.PROJECT]}
-                alt={opportunity.PROJECT}
-                className="opportunity-image"
-              />
-              <h3>{opportunity.PROJECT}</h3>
-              <p><strong>Start Date:</strong> {opportunity["Start date"]}</p>
-              <p><strong>End Date:</strong> {opportunity["End date"]}</p>
-              <p><strong>Accomodation:</strong> {opportunity["Accomodation"]}</p>
+          {data.map((opportunity, index) => {
+            const projectName = opportunity.PROJECT;
+            const driveId = driveFolderIds[projectName];
+            const driveUrl = driveId ? `https://drive.google.com/drive/folders/${driveId}` : null;
 
-              <p><strong>Fee:</strong> {opportunity["Fee (€)"]}</p>
+            return (
+              <div className="opportunity-card" key={index}>
+                <img
+                  src={opportunityImages[projectName]}
+                  alt={projectName}
+                  className="opportunity-image"
+                />
+                <h3>{projectName}</h3>
+                <p><strong>Start Date:</strong> {opportunity["Start date"]}</p>
+                <p><strong>End Date:</strong> {opportunity["End date"]}</p>
+                <p><strong>Accomodation:</strong> {opportunity["Accomodation"]}</p>
+                <p><strong>Fee:</strong> {opportunity["Fee (€)"]}</p>
+                <p><strong>Slots:</strong> {opportunity["#SLOTS"]}</p>
 
-              <p><strong>Slots:</strong> {opportunity["#SLOTS"]}</p>
-              <a
-                href={`https://aiesec.org/opportunity/global-volunteer/${opportunity["ID"]}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opportunity-link"
-              >
-                Learn More
-              </a>
-            </div>
-          ))}
+                <div className="button-container">
+                  <a
+                    href={`https://aiesec.org/opportunity/global-volunteer/${opportunity["ID"]}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="opportunity-link"
+                  >
+                    Learn More
+                  </a>
+
+                  {driveUrl && (
+                    <a
+                      href={driveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="drive-link"
+                    >
+                      Booklet 
+                    </a>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>
