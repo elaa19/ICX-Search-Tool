@@ -77,6 +77,16 @@ const Header = () => {
             </ul>
           </li>
 
+          <li>
+            <a 
+              href="https://drive.google.com/drive/folders/1NYaYGggvhXCxbJVquVzGtA4r3J9MUUEG" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Attraction Materials
+            </a>
+          </li>
+
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
