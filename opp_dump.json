@@ -1,0 +1,24 @@
+{
+  "errors": [
+    {
+      "message": "Field 'project_info' doesn't exist on type 'Opportunity'",
+      "locations": [
+        {
+          "line": 17,
+          "column": 7
+        }
+      ],
+      "path": [
+        "query",
+        "allOpportunity",
+        "data",
+        "project_info"
+      ],
+      "extensions": {
+        "code": "undefinedField",
+        "typeName": "Opportunity",
+        "fieldName": "project_info"
+      }
+    }
+  ]
+}

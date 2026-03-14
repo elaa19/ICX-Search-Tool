@@ -6,25 +6,56 @@ import Fingerprint from "./assets/4.4 white 1.png";
 import Classroom from "./assets/4.6_1 white.png";
 import Skillup from "./assets/8.6 white.png";
 import Onthemap from "./assets/8.9 white.png";
+import Scaleup from "./assets/scaleup.png";
+import Greenleader from "./assets/greenleaders.png";
+import Youthforimpact from "./assets/youthforimpact.png";
+import Raiseyourvoice from "./assets/raiseyourvoice.png";
 
 const Opps = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const sheetUrl =
-      "https://docs.google.com/spreadsheets/d/1F1RQOMYBWk1Wj_evdchuSi8FDnVjs9DA2q1ytAj7v7E/gviz/tq?tqx=out:csv&sheet=iGV%20Opportuinities";
+    const fetchOpportunities = async () => {
+      try {
+        const query = `
+          query {
+            allOpportunity(filters: { committee: 891, programmes: [7] }) {
+              data {
+                id
+                title
+                openings
+                location
+                available_slots {
+                  start_date
+                  end_date
+                }
+              }
+            }
+          }
+        `;
 
-    fetch(sheetUrl)
-      .then((response) => response.text())
-      .then((csvData) => {
-        Papa.parse(csvData, {
-          complete: (result) => {
-            setData(result.data.filter((row) => row.Statues === "Open"));
+        const response = await fetch("https://gis-api.aiesec.org/graphql", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "IaVsbi8-DqvZ8AVJbEs5yQGgS83BoRLcv4ORmxvZTLo"
           },
-          header: true,
+          body: JSON.stringify({ query })
         });
-      })
-      .catch((error) => console.error("Error fetching the sheet:", error));
+
+        const result = await response.json();
+        
+        if (result.data && result.data.allOpportunity && result.data.allOpportunity.data) {
+          setData(result.data.allOpportunity.data);
+        } else {
+          console.error("Unexpected GraphQL response structure:", result);
+        }
+      } catch (error) {
+        console.error("Error fetching opportunities from GraphQL:", error);
+      }
+    };
+
+    fetchOpportunities();
   }, []);
 
   const opportunityImages = {
@@ -33,9 +64,11 @@ const Opps = () => {
     "Global Classroom": Classroom,
     "Skill Up!": Skillup,
     "On the Map": Onthemap,
-  };
-
-  // Mapping des noms de projets (clé = valeur de opportunity.PROJECT) vers les IDs des dossiers Drive
+    "Green Leader": Greenleader,
+    "Raise your voice": Raiseyourvoice,
+    "Scale-up": Scaleup,
+    "Youth for impact": Youthforimpact,
+  };  // Mapping des noms de projets (clé = valeur de opportunity.PROJECT) vers les IDs des dossiers Drive
   const driveFolderIds = {
     "Hearltbeat": "1d8CaX5AquzX32gV2SZsX88aw_iuNBPp6",   // Heartbeat
     "Fingerprint": "11OWnuuw5mnwsyyru-BmiPreYkHEc_7go", // Finger Print
@@ -54,27 +87,65 @@ const Opps = () => {
         <h2>Opportunities</h2>
         <div className="opportunity-cards">
           {data.map((opportunity, index) => {
-            const projectName = opportunity.PROJECT;
-            const driveId = driveFolderIds[projectName];
+            // Determine project type based on title for the image/folder mapping
+            let projectKey = "Hearltbeat"; // Default
+            const titleUpper = opportunity.title ? opportunity.title.toUpperCase() : "";
+            
+            if (titleUpper.includes("HEARTBEAT") || titleUpper.includes("HEART BEAT")) {
+               projectKey = "Hearltbeat";
+            } else if (titleUpper.includes("FINGERPRINT") || titleUpper.includes("FINGER PRINT")) {
+               projectKey = "Fingerprint";
+            } else if (titleUpper.includes("GLOBAL CLASSROOM")) {
+               projectKey = "Global Classroom";
+            } else if (titleUpper.includes("SKILL") && titleUpper.includes("UP")) {
+               projectKey = "Skill Up!";
+            } else if (titleUpper.includes("ON THE MAP") || titleUpper.includes("MAP")) {
+               projectKey = "On the Map";
+            } else if (titleUpper.includes("GREEN LEADER")) {
+               projectKey = "Green Leader";
+            } else if (titleUpper.includes("RAISE") && titleUpper.includes("VOICE")) {
+               projectKey = "Raise your voice";
+            } else if (titleUpper.includes("SCALE") && titleUpper.includes("UP")) {
+               projectKey = "Scale-up";
+            } else if (titleUpper.includes("YOUTH") && titleUpper.includes("IMPACT")) {
+               projectKey = "Youth for impact";
+            }
+
+            const driveId = driveFolderIds[projectKey];
             const driveUrl = driveId ? `https://drive.google.com/drive/folders/${driveId}` : null;
+
+            // Extract correct start, end dates and duration from available_slots or title
+            let startDate = "N/A";
+            let endDate = "N/A";
+            if (opportunity.available_slots && opportunity.available_slots.length > 0) {
+              startDate = new Date(opportunity.available_slots[0].start_date).toLocaleDateString();
+              endDate = new Date(opportunity.available_slots[0].end_date).toLocaleDateString();
+            }
+
+            // Extract duration from title (e.g., "[6 weeks]")
+            let duration = "N/A";
+            const durationMatch = opportunity.title ? opportunity.title.match(/\[(\d+)\s+week/i) : null;
+            if (durationMatch && durationMatch[1]) {
+              duration = durationMatch[1];
+            }
 
             return (
               <div className="opportunity-card" key={index}>
                 <img
-                  src={opportunityImages[projectName]}
-                  alt={projectName}
+                  src={opportunityImages[projectKey] || Heart}
+                  alt={opportunity.title}
                   className="opportunity-image"
                 />
-                <h3>{projectName}</h3>
-                <p><strong>Start Date:</strong> {opportunity["Start date"]}</p>
-                <p><strong>End Date:</strong> {opportunity["End date"]}</p>
-                <p><strong>Accomodation:</strong> {opportunity["Accomodation"]}</p>
-                <p><strong>Fee:</strong> {opportunity["Fee (€)"]}</p>
-                <p><strong>Slots:</strong> {opportunity["#SLOTS"]}</p>
+                <h3>{opportunity.title}</h3>
+                <p><strong>Location:</strong> {opportunity.location}</p>
+                <p><strong>Duration:</strong> {duration} weeks</p>
+                <p><strong>Start Date:</strong> {startDate}</p>
+                <p><strong>End Date:</strong> {endDate}</p>
+                <p><strong>Slots:</strong> {opportunity.openings}</p>
 
                 <div className="button-container">
                   <a
-                    href={`https://aiesec.org/opportunity/global-volunteer/${opportunity["ID"]}`}
+                    href={`https://aiesec.org/opportunity/global-volunteer/${opportunity.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="opportunity-link"

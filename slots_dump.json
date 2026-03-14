@@ -1,0 +1,346 @@
+{
+  "data": {
+    "allOpportunity": {
+      "data": [
+        {
+          "title": "Scale Up! [4 weeks]",
+          "available_slots": [
+            {
+              "id": "242967",
+              "title": "Geomatic",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            },
+            {
+              "id": "242968",
+              "title": "Geomatic",
+              "start_date": "2026-07-01",
+              "end_date": "2026-07-29"
+            }
+          ]
+        },
+        {
+          "title": "Scale Up! [4 weeks]",
+          "available_slots": [
+            {
+              "id": "227197",
+              "title": "1 june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            }
+          ]
+        },
+        {
+          "title": "Youth 4 Impact",
+          "available_slots": [
+            {
+              "id": "227198",
+              "title": "1 june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            }
+          ]
+        },
+        {
+          "title": "Raise Your Voice [4 weeks]",
+          "available_slots": [
+            {
+              "id": "227199",
+              "title": "1 june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            }
+          ]
+        },
+        {
+          "title": "Scale Up! [4 weeks]",
+          "available_slots": [
+            {
+              "id": "227200",
+              "title": "1 june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            },
+            {
+              "id": "235242",
+              "title": "Scale up ",
+              "start_date": "2026-05-01",
+              "end_date": "2026-05-29"
+            },
+            {
+              "id": "245733",
+              "title": "Scale up!",
+              "start_date": "2026-07-01",
+              "end_date": "2026-07-29"
+            },
+            {
+              "id": "246026",
+              "title": "Scale Up!",
+              "start_date": "2026-05-21",
+              "end_date": "2026-06-20"
+            },
+            {
+              "id": "246027",
+              "title": "Scale up! ",
+              "start_date": "2026-05-16",
+              "end_date": "2026-06-13"
+            }
+          ]
+        },
+        {
+          "title": "On the Map [4 week]",
+          "available_slots": [
+            {
+              "id": "236308",
+              "title": "On the Map",
+              "start_date": "2026-07-29",
+              "end_date": "2026-08-26"
+            },
+            {
+              "id": "236589",
+              "title": "on the map",
+              "start_date": "2026-07-16",
+              "end_date": "2026-08-15"
+            }
+          ]
+        },
+        {
+          "title": "Scale Up! [4 weeks]",
+          "available_slots": [
+            {
+              "id": "227201",
+              "title": "1june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            }
+          ]
+        },
+        {
+          "title": "Fingerprint [4 weeks]",
+          "available_slots": [
+            {
+              "id": "227202",
+              "title": "1june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            },
+            {
+              "id": "228313",
+              "title": "1st june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            }
+          ]
+        },
+        {
+          "title": "Scale Up! [6 weeks]",
+          "available_slots": []
+        },
+        {
+          "title": "Scale Up! [6 weeks]",
+          "available_slots": [
+            {
+              "id": "227203",
+              "title": "1 june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            }
+          ]
+        },
+        {
+          "title": "Scale Up! [6 weeks]",
+          "available_slots": [
+            {
+              "id": "222646",
+              "title": "1st june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            },
+            {
+              "id": "227756",
+              "title": "scale up",
+              "start_date": "2026-07-15",
+              "end_date": "2026-08-29"
+            },
+            {
+              "id": "240340",
+              "title": "scale up",
+              "start_date": "2026-07-01",
+              "end_date": "2026-08-15"
+            },
+            {
+              "id": "240529",
+              "title": "Scale Up ",
+              "start_date": "2026-08-20",
+              "end_date": "2026-10-01"
+            }
+          ]
+        },
+        {
+          "title": "Youth 4 Impact [6 weeks]",
+          "available_slots": [
+            {
+              "id": "222644",
+              "title": "scale up",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "title": "On the Map [6 weeks]",
+          "available_slots": [
+            {
+              "id": "222641",
+              "title": "1st june",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            },
+            {
+              "id": "227280",
+              "title": "OTM",
+              "start_date": "2026-08-05",
+              "end_date": "2026-09-02"
+            },
+            {
+              "id": "225462",
+              "title": "otm",
+              "start_date": "2026-07-01",
+              "end_date": "2026-07-29"
+            },
+            {
+              "id": "245554",
+              "title": "Otm",
+              "start_date": "2026-07-01",
+              "end_date": "2026-08-12"
+            },
+            {
+              "id": "245935",
+              "title": "otm",
+              "start_date": "2026-05-01",
+              "end_date": "2026-05-30"
+            }
+          ]
+        },
+        {
+          "title": "Skill Up! [6 weeks]",
+          "available_slots": [
+            {
+              "id": "222642",
+              "title": "audiovisuel",
+              "start_date": "2026-05-01",
+              "end_date": "2026-06-12"
+            }
+          ]
+        },
+        {
+          "title": "Global Classroom [6 weeks]",
+          "available_slots": [
+            {
+              "id": "222639",
+              "title": "frensh",
+              "start_date": "2026-05-01",
+              "end_date": "2026-06-12"
+            }
+          ]
+        },
+        {
+          "title": "On the Map [6 weeks]",
+          "available_slots": [
+            {
+              "id": "224076",
+              "title": "OTM",
+              "start_date": "2026-07-01",
+              "end_date": "2026-07-29"
+            }
+          ]
+        },
+        {
+          "title": "Skill Up! [6 weeks]",
+          "available_slots": []
+        },
+        {
+          "title": "Fingerprint [6 weeks]",
+          "available_slots": [
+            {
+              "id": "222635",
+              "title": "finrprint",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "title": "Scale Up! [6 weeks]",
+          "available_slots": [
+            {
+              "id": "223233",
+              "title": "scale up media",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "title": "Green Leaders [6 weeks]",
+          "available_slots": [
+            {
+              "id": "233576",
+              "title": "June first",
+              "start_date": "2026-06-01",
+              "end_date": "2026-06-29"
+            }
+          ]
+        },
+        {
+          "title": "On the Map [8 weeks]",
+          "available_slots": []
+        },
+        {
+          "title": "Global Classroom [6 weeks]",
+          "available_slots": [
+            {
+              "id": "223236",
+              "title": "GC Turkish",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "title": "Global Classroom [6 weeks]",
+          "available_slots": [
+            {
+              "id": "223235",
+              "title": "GC Russian",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "title": "Global Classroom [6 weeks]",
+          "available_slots": [
+            {
+              "id": "223234",
+              "title": "GC italien",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            }
+          ]
+        },
+        {
+          "title": "Global Classroom [6 weeks]",
+          "available_slots": [
+            {
+              "id": "223231",
+              "title": "GC spanish",
+              "start_date": "2026-06-01",
+              "end_date": "2026-07-13"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

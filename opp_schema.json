@@ -1,0 +1,918 @@
+{
+  "data": {
+    "__type": {
+      "name": "Opportunity",
+      "fields": [
+        {
+          "name": "accepted_count",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "all_slots",
+          "type": {
+            "name": "SlotConnection",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "applicants_count",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "application_processing_time",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "applications_close_date",
+          "type": {
+            "name": "DateTime",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "applications_status_count",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "applications_status_facets",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "applied_to",
+          "type": {
+            "name": "Boolean",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "applied_to_with",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "available_openings",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "available_slots",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "Slot",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "average_nps_score",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "backgrounds",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "ConstantMap",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "branch",
+          "type": {
+            "name": "Branch",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "city",
+          "type": {
+            "name": "City",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "comments",
+          "type": {
+            "name": "CommentConnection",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "company_description",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "completeness",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "cover_photo",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "created_at",
+          "type": {
+            "name": "DateTime",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "currency",
+          "type": {
+            "name": "Currency",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "current_status",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "custom_statuses",
+          "type": {
+            "name": "CustomStatusTypeConnection",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "date_opened",
+          "type": {
+            "name": "DateTime",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "description",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "duration",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "earliest_start_date",
+          "type": {
+            "name": "DateTime",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "experience_type",
+          "type": {
+            "name": "ExperienceType",
+            "kind": "ENUM",
+            "ofType": null
+          }
+        },
+        {
+          "name": "external_opportunity_id",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "external_opportunity_link",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "fee_and_health_insurance",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "google_place_id",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "has_opportunity_applications",
+          "type": {
+            "name": "Boolean",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "has_opportunity_questions",
+          "type": {
+            "name": "Boolean",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "home_lc",
+          "type": {
+            "name": "Office",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "home_mc",
+          "type": {
+            "name": "Office",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "host_lc",
+          "type": {
+            "name": "Office",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "id",
+          "type": {
+            "name": null,
+            "kind": "NON_NULL",
+            "ofType": {
+              "name": "ID",
+              "kind": "SCALAR"
+            }
+          }
+        },
+        {
+          "name": "is_favourited",
+          "type": {
+            "name": "Boolean",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "is_global_project",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "is_project_enabled",
+          "type": {
+            "name": "Boolean",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "languages",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "ConstantMap",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "lat",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "latest_end_date",
+          "type": {
+            "name": "DateTime",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "latest_reviews",
+          "type": {
+            "name": "NpsResponseType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "legal_info",
+          "type": {
+            "name": "LegalInfoType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "lng",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "location",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "logistics_info",
+          "type": {
+            "name": "LogisticInfoType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "managers",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "Person",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "mandatory_fields_check",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "measure_of_impacts",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "ConstantMap",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "meta",
+          "type": {
+            "name": "OpportunityMetaType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "nationalities",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "ConstantMap",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "office_footfall_for_exchange",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "offline_assessments",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "OfflineAssessment",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "openings",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "opportunity_cost",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "opportunity_duration_type",
+          "type": {
+            "name": "OpportunityDurationType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "opportunity_questions",
+          "type": {
+            "name": "OpportunityQuestionConnection",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "organisation",
+          "type": {
+            "name": "Organisation",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "parent_opportunity",
+          "type": {
+            "name": "Opportunity",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "partner_type",
+          "type": {
+            "name": "PartnerTypes",
+            "kind": "ENUM",
+            "ofType": null
+          }
+        },
+        {
+          "name": "percentage_of_fulfillment",
+          "type": {
+            "name": "Float",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "permissions",
+          "type": {
+            "name": "OpportunityPermissionType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "person",
+          "type": {
+            "name": "Person",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "preferred_locations_info",
+          "type": {
+            "name": "Office",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "profile_photo",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "programme",
+          "type": {
+            "name": "Programme",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "programme_fees",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "programmes",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "Programme",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "progress_percentage_for_standards",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "project",
+          "type": {
+            "name": "Opportunity",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "project_description",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "project_duration",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "project_fee",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "project_id",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "project_name",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "questionnaire",
+          "type": {
+            "name": "Questionnaire",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "redirect_to_external_opportunity",
+          "type": {
+            "name": "Boolean",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "rejected_count",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "remark",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "remote_experience_additional_details",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "remote_experience_duration",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "remote_experience_salary",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "remote_opportunity",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "reviews",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "role_info",
+          "type": {
+            "name": "RoleInfoType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "scorecard",
+          "type": {
+            "name": "Scorecard",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "sdg_info",
+          "type": {
+            "name": "Sdg",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "selection_processes",
+          "type": {
+            "name": "SelectionProcessConnection",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "skills",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "ConstantMap",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "specifics_info",
+          "type": {
+            "name": "SpecificInfoType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "status",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "study_levels",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "Constant",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "sub_product",
+          "type": {
+            "name": "SubProduct",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "tag_lists",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "TagList",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "template_opportunities_locations",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "Int",
+              "kind": "SCALAR"
+            }
+          }
+        },
+        {
+          "name": "timeline_events",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": null,
+              "kind": "NON_NULL"
+            }
+          }
+        },
+        {
+          "name": "title",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "tm_details",
+          "type": {
+            "name": "TmDetailType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "todo_type",
+          "type": {
+            "name": "TodoType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "transparent_fee_details",
+          "type": {
+            "name": "OpportunityTransparentFeeDetailsType",
+            "kind": "OBJECT",
+            "ofType": null
+          }
+        },
+        {
+          "name": "updated_at",
+          "type": {
+            "name": "DateTime",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "video_url",
+          "type": {
+            "name": "String",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "view_count",
+          "type": {
+            "name": "Int",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        },
+        {
+          "name": "weekly_activities",
+          "type": {
+            "name": null,
+            "kind": "LIST",
+            "ofType": {
+              "name": "WeeklyActivity",
+              "kind": "OBJECT"
+            }
+          }
+        },
+        {
+          "name": "work_hours",
+          "type": {
+            "name": "JSON",
+            "kind": "SCALAR",
+            "ofType": null
+          }
+        }
+      ]
+    }
+  }
+}

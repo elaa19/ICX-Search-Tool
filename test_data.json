@@ -1,0 +1,24 @@
+{
+  "errors": [
+    {
+      "message": "Field 'details' doesn't exist on type 'Opportunity'",
+      "locations": [
+        {
+          "line": 1,
+          "column": 166
+        }
+      ],
+      "path": [
+        "query",
+        "allOpportunity",
+        "data",
+        "details"
+      ],
+      "extensions": {
+        "code": "undefinedField",
+        "typeName": "Opportunity",
+        "fieldName": "details"
+      }
+    }
+  ]
+}
