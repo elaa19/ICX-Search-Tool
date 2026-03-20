@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./opps.css";
-import Papa from "papaparse";
 import Heart from "./assets/3.4 white 1.png";
 import Fingerprint from "./assets/4.4 white 1.png";
 import Classroom from "./assets/4.6_1 white.png";
@@ -11,51 +10,13 @@ import Greenleader from "./assets/greenleaders.png";
 import Youthforimpact from "./assets/youthforimpact.png";
 import Raiseyourvoice from "./assets/raiseyourvoice.png";
 
+import oppsData from "../../data/opps_data.json";
+
 const Opps = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const fetchOpportunities = async () => {
-      try {
-        const query = `
-          query {
-            allOpportunity(filters: { committee: 891, programmes: [7] }) {
-              data {
-                id
-                title
-                openings
-                location
-                available_slots {
-                  start_date
-                  end_date
-                }
-              }
-            }
-          }
-        `;
-
-        const response = await fetch("https://gis-api.aiesec.org/graphql", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": "IaVsbi8-DqvZ8AVJbEs5yQGgS83BoRLcv4ORmxvZTLo"
-          },
-          body: JSON.stringify({ query })
-        });
-
-        const result = await response.json();
-        
-        if (result.data && result.data.allOpportunity && result.data.allOpportunity.data) {
-          setData(result.data.allOpportunity.data);
-        } else {
-          console.error("Unexpected GraphQL response structure:", result);
-        }
-      } catch (error) {
-        console.error("Error fetching opportunities from GraphQL:", error);
-      }
-    };
-
-    fetchOpportunities();
+    setData(oppsData);
   }, []);
 
   const opportunityImages = {
@@ -142,6 +103,7 @@ const Opps = () => {
                 <p><strong>Start Date:</strong> {startDate}</p>
                 <p><strong>End Date:</strong> {endDate}</p>
                 <p><strong>Slots:</strong> {opportunity.openings}</p>
+                <p><strong>Accommodation:</strong> Provided and Covered</p>
 
                 <div className="button-container">
                   <a

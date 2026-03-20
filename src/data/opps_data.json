@@ -1,0 +1,462 @@
+[
+  {
+    "id": "1333257",
+    "title": "Scale Up! [4 weeks]",
+    "openings": 0,
+    "location": null,
+    "available_slots": [],
+    "logistics_info": {
+      "accommodation_covered": null,
+      "accommodation_provided": null
+    }
+  },
+  {
+    "id": "1333250",
+    "title": "Scale Up! [4 weeks]",
+    "openings": 5,
+    "location": "Tunis, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      },
+      {
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-29"
+      },
+      {
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1333249",
+    "title": "Heartbeat [4 weeks]",
+    "openings": 4,
+    "location": "Tunis, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      },
+      {
+        "start_date": "2026-09-01",
+        "end_date": "2026-09-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1332285",
+    "title": "Scale Up! [4 weeks]",
+    "openings": 8,
+    "location": "Ariana, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      },
+      {
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329867",
+    "title": "Scale Up! [4 weeks]",
+    "openings": 2,
+    "location": "Denden, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329866",
+    "title": "Youth 4 Impact",
+    "openings": 2,
+    "location": "Denden, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329865",
+    "title": "Raise Your Voice [4 weeks]",
+    "openings": 2,
+    "location": "Denden, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329864",
+    "title": "Scale Up! [4 weeks]",
+    "openings": 19,
+    "location": "Tunis, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      },
+      {
+        "start_date": "2026-05-01",
+        "end_date": "2026-05-29"
+      },
+      {
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-29"
+      },
+      {
+        "start_date": "2026-05-21",
+        "end_date": "2026-06-20"
+      },
+      {
+        "start_date": "2026-05-16",
+        "end_date": "2026-06-13"
+      },
+      {
+        "start_date": "2026-12-20",
+        "end_date": "2027-01-17"
+      },
+      {
+        "start_date": "2026-12-15",
+        "end_date": "2027-01-12"
+      },
+      {
+        "start_date": "2026-12-01",
+        "end_date": "2026-12-29"
+      },
+      {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329863",
+    "title": "On the Map [4 week]",
+    "openings": 5,
+    "location": "Tunis, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-07-29",
+        "end_date": "2026-08-26"
+      },
+      {
+        "start_date": "2026-07-16",
+        "end_date": "2026-08-15"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329861",
+    "title": "Scale Up! [4 weeks]",
+    "openings": 3,
+    "location": "La Goulette, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329859",
+    "title": "Fingerprint [4 weeks]",
+    "openings": 6,
+    "location": "La Goulette, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      },
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329076",
+    "title": "Scale Up! [6 weeks]",
+    "openings": 3,
+    "location": "Ariana, Tunisie",
+    "available_slots": [],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329075",
+    "title": "Scale Up! [6 weeks]",
+    "openings": 2,
+    "location": "Denden, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329074",
+    "title": "Scale Up! [6 weeks]",
+    "openings": 25,
+    "location": "La Medina, Tunis, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-13"
+      },
+      {
+        "start_date": "2026-07-15",
+        "end_date": "2026-08-29"
+      },
+      {
+        "start_date": "2026-07-01",
+        "end_date": "2026-08-15"
+      },
+      {
+        "start_date": "2026-08-20",
+        "end_date": "2026-10-01"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329073",
+    "title": "Youth 4 Impact [6 weeks]",
+    "openings": 1,
+    "location": "Denden, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-13"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329072",
+    "title": "On the Map [6 weeks]",
+    "openings": 25,
+    "location": "La Medina, Tunis, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-13"
+      },
+      {
+        "start_date": "2026-08-05",
+        "end_date": "2026-09-02"
+      },
+      {
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-29"
+      },
+      {
+        "start_date": "2026-07-01",
+        "end_date": "2026-08-12"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329071",
+    "title": "Skill Up! [6 weeks]",
+    "openings": 1,
+    "location": "Ariana, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-05-01",
+        "end_date": "2026-06-12"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329070",
+    "title": "Global Classroom [6 weeks]",
+    "openings": 3,
+    "location": "Ariana, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-05-01",
+        "end_date": "2026-06-12"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329069",
+    "title": "On the Map [6 weeks]",
+    "openings": 4,
+    "location": "La Medina, Tunis, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-07-01",
+        "end_date": "2026-07-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329068",
+    "title": "Skill Up! [6 weeks]",
+    "openings": 0,
+    "location": "Ariana, Tunisie",
+    "available_slots": [],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329067",
+    "title": "Fingerprint [6 weeks]",
+    "openings": 7,
+    "location": "Ariana, Tunisie",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-13"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329039",
+    "title": "Scale Up! [6 weeks]",
+    "openings": 1,
+    "location": "Ariana, Tunisia",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-13"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329038",
+    "title": "Green Leaders [6 weeks]",
+    "openings": 2,
+    "location": "Ariana, Tunisia",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-29"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329037",
+    "title": "On the Map [8 weeks]",
+    "openings": 0,
+    "location": "Ariana, Tunisia",
+    "available_slots": [],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  },
+  {
+    "id": "1329036",
+    "title": "Global Classroom [6 weeks]",
+    "openings": 3,
+    "location": "Ariana, Tunisia",
+    "available_slots": [
+      {
+        "start_date": "2026-06-01",
+        "end_date": "2026-07-13"
+      }
+    ],
+    "logistics_info": {
+      "accommodation_covered": "covered",
+      "accommodation_provided": "provided"
+    }
+  }
+]
