@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/ICX-Search-Tool/static/css/main.45d85a0e.css",
+    "main.js": "/ICX-Search-Tool/static/js/main.d59de40e.js",
+    "static/js/488.9c92ff38.chunk.js": "/ICX-Search-Tool/static/js/488.9c92ff38.chunk.js",
+    "static/media/travller.png": "/ICX-Search-Tool/static/media/travller.d6147572657f5b88776a.png",
+    "static/media/Image.png": "/ICX-Search-Tool/static/media/Image.797de9b6aa78b4f0b6a9.png",
+    "static/media/omar.png": "/ICX-Search-Tool/static/media/omar.12346bf6a12bfb6f7b25.png",
+    "static/media/samii.png": "/ICX-Search-Tool/static/media/samii.67f7db52c4e547c4b7b4.png",
+    "static/media/8.9 white.png": "/ICX-Search-Tool/static/media/8.9 white.e34d6282130a30c67b58.png",
+    "static/media/youthforimpact.png": "/ICX-Search-Tool/static/media/youthforimpact.4c5073a56adad0a3bc89.png",
+    "static/media/scaleup.png": "/ICX-Search-Tool/static/media/scaleup.85ed0f08ab04ecbb5ce3.png",
+    "static/media/8.6 white.png": "/ICX-Search-Tool/static/media/8.6 white.193594825089d2a7312c.png",
+    "static/media/4.4 white 1.png": "/ICX-Search-Tool/static/media/4.4 white 1.29f89744fca9da0d3f65.png",
+    "static/media/3.4 white 1.png": "/ICX-Search-Tool/static/media/3.4 white 1.4ed9aea53529691b1084.png",
+    "static/media/greenleaders.png": "/ICX-Search-Tool/static/media/greenleaders.d3da08fee807256c079d.png",
+    "static/media/4.6_1 white.png": "/ICX-Search-Tool/static/media/4.6_1 white.d5274524cb3c8d5b2e44.png",
+    "static/media/raiseyourvoice.png": "/ICX-Search-Tool/static/media/raiseyourvoice.e8b7b4eec2d6b8b90821.png",
+    "static/media/igvf.png": "/ICX-Search-Tool/static/media/igvf.4549fa1153762dd41720.png",
+    "static/media/igtf.png": "/ICX-Search-Tool/static/media/igtf.b02b4a2d9fa58ed047ee.png",
+    "static/media/aiesecl.png": "/ICX-Search-Tool/static/media/aiesecl.c032e27960b4a22535f6.png",
+    "index.html": "/ICX-Search-Tool/index.html",
+    "main.45d85a0e.css.map": "/ICX-Search-Tool/static/css/main.45d85a0e.css.map",
+    "main.d59de40e.js.map": "/ICX-Search-Tool/static/js/main.d59de40e.js.map",
+    "488.9c92ff38.chunk.js.map": "/ICX-Search-Tool/static/js/488.9c92ff38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45d85a0e.css",
+    "static/js/main.d59de40e.js"
+  ]
+}
