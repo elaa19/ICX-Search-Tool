@@ -6,6 +6,7 @@ import Fingerprint from "./assets/4.4 white 1.png";
 import Classroom from "./assets/4.6_1 white.png";
 import Skillup from "./assets/8.6 white.png";
 import Onthemap from "./assets/8.9 white.png";
+import Igvf from "../icxi/assets/igvf.png";
 import frozenData from "./frozen_opportunities.json";
 
 const Opps = () => {
@@ -18,6 +19,7 @@ const Opps = () => {
     "Global Classroom": Classroom,
     "Skill Up!": Skillup,
     "On the Map": Onthemap,
+    "Scale-up": Skillup,
   };
   const driveFolderIds = {
     "Hearltbeat": "1d8CaX5AquzX32gV2SZsX88aw_iuNBPp6",
@@ -58,7 +60,7 @@ const Opps = () => {
               return (
                 <div className="opportunity-card" key={index}>
                   <img
-                    src={opportunityImages[mapKey] || opportunityImages[projectName] || Classroom} // Added fallback image just in case
+                    src={opportunityImages[mapKey] || opportunityImages[projectName] || Igvf} // Added fallback image just in case
                     alt={rawProjectName}
                     className="opportunity-image"
                   />
