@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ICX-Search-Tool/static/css/main.45d85a0e.css",
-    "main.js": "/ICX-Search-Tool/static/js/main.758cb499.js",
+    "main.js": "/ICX-Search-Tool/static/js/main.a4d2647e.js",
     "static/js/488.9c92ff38.chunk.js": "/ICX-Search-Tool/static/js/488.9c92ff38.chunk.js",
     "static/media/travller.png": "/ICX-Search-Tool/static/media/travller.d6147572657f5b88776a.png",
     "static/media/Image.png": "/ICX-Search-Tool/static/media/Image.797de9b6aa78b4f0b6a9.png",
@@ -17,11 +17,11 @@
     "static/media/aiesecl.png": "/ICX-Search-Tool/static/media/aiesecl.c032e27960b4a22535f6.png",
     "index.html": "/ICX-Search-Tool/index.html",
     "main.45d85a0e.css.map": "/ICX-Search-Tool/static/css/main.45d85a0e.css.map",
-    "main.758cb499.js.map": "/ICX-Search-Tool/static/js/main.758cb499.js.map",
+    "main.a4d2647e.js.map": "/ICX-Search-Tool/static/js/main.a4d2647e.js.map",
     "488.9c92ff38.chunk.js.map": "/ICX-Search-Tool/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.45d85a0e.css",
-    "static/js/main.758cb499.js"
+    "static/js/main.a4d2647e.js"
   ]
 }
