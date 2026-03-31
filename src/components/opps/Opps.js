@@ -7,6 +7,10 @@ import Classroom from "./assets/4.6_1 white.png";
 import Skillup from "./assets/8.6 white.png";
 import Onthemap from "./assets/8.9 white.png";
 import Igvf from "../icxi/assets/igvf.png";
+import GreenLeaderImage from "./assets/greenleaders.png";
+import RaiseYourVoiceImage from "./assets/raiseyourvoice.png";
+import ScaleUpImage from "./assets/scaleup.png";
+import YouthForImpactImage from "./assets/youthforimpact.png";
 import frozenData from "./frozen_opportunities.json";
 
 const Opps = () => {
@@ -19,7 +23,10 @@ const Opps = () => {
     "Global Classroom": Classroom,
     "Skill Up!": Skillup,
     "On the Map": Onthemap,
-    "Scale-up": Skillup,
+    "Scale-up": ScaleUpImage,
+    "Green Leader": GreenLeaderImage,
+    "Raise your voice": RaiseYourVoiceImage,
+    "Youth for impact": YouthForImpactImage,
   };
   const driveFolderIds = {
     "Hearltbeat": "1d8CaX5AquzX32gV2SZsX88aw_iuNBPp6",
