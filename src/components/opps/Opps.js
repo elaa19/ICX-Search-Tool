@@ -11,6 +11,7 @@ import GreenLeaderImage from "./assets/greenleaders.png";
 import RaiseYourVoiceImage from "./assets/raiseyourvoice.png";
 import ScaleUpImage from "./assets/scaleup.png";
 import YouthForImpactImage from "./assets/youthforimpact.png";
+import AquaticaImage from "./assets/aquatica.png";
 import frozenData from "./frozen_opportunities.json";
 
 const Opps = () => {
@@ -27,6 +28,7 @@ const Opps = () => {
     "Green Leader": GreenLeaderImage,
     "Raise your voice": RaiseYourVoiceImage,
     "Youth for impact": YouthForImpactImage,
+    "Aquatica": AquaticaImage,
   };
   const driveFolderIds = {
     "Hearltbeat": "1d8CaX5AquzX32gV2SZsX88aw_iuNBPp6",
