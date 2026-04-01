@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-async function fetchOpps() {
+async function fetchGTeOpps() {
   const COMMITTEE_ID = "891";
   let allData = [];
   let page = 1;
@@ -10,7 +10,7 @@ async function fetchOpps() {
     const query = `
       query {
         opportunities(filters: {
-          programmes: [7], 
+          programmes: [9], 
           committee: ${COMMITTEE_ID},
           statuses: ["open"]
         }, page: ${page}, per_page: 100) {
@@ -57,8 +57,8 @@ async function fetchOpps() {
       const result = await response.json();
       
       if (result.errors) {
-        fs.writeFileSync('error.json', JSON.stringify(result.errors, null, 2));
-        console.error("GraphQL errors written to error.json");
+        fs.writeFileSync('gte_error.json', JSON.stringify(result.errors, null, 2));
+        console.error("GraphQL errors written to gte_error.json");
         break;
       }
       
@@ -80,27 +80,14 @@ async function fetchOpps() {
     }
   }
 
-  // Define drive arrays
-  const driveFolderIds = {
-    "Hearltbeat": "1d8CaX5AquzX32gV2SZsX88aw_iuNBPp6",
-    "Fingerprint": "11OWnuuw5mnwsyyru-BmiPreYkHEc_7go",
-    "Global Classroom": "1Zw4aAqMqU3uIFwPd4GsV2q63w1Kzg3G6",
-    "Skill Up!": "1Uv-oVlphxa5rFZxX-ODrwwL4py9key1Q",
-    "On the Map": "1l_co24o4f7pK3qqoq6sGsNcG0IobVWRC",
-    "Green Leader": "15D5AcrM53Ua0wT-0EhCtp9qVjrH1rGyv",
-    "Raise your voice": "1s5ql3MgeB5SyMNQlwvMi4zp-IaH4eG5K",
-    "Scale-up": "1SYGsBb_YPInpmDXorNYdKFUYdTd-S-I4",
-    "Youth for impact": "1RYl1zLp4ZlCEEmM15sL2WezBZzDEA-WQ"
-  };
-
   // Manually filter to ensure we strictly get open ones
   const openData = allData.filter(opp => opp.status === "open");
-  console.log(`Filtered down to ${openData.length} officially OPEN opportunities out of ${allData.length}`);
+  console.log(`Filtered down to ${openData.length} officially OPEN GTe opportunities out of ${allData.length}`);
 
   // Map the data
   const mappedData = openData.map(opp => {
-    let accProvided = opp.logistics_info?.accommodation_provided || opp.specifics_info?.accommodation_provided || "Not specified";
-    let accCovered = opp.logistics_info?.accommodation_covered || opp.specifics_info?.accommodation_covered || "Not specified";
+    let accProvided = opp.logistics_info?.accommodation_provided || "Not specified";
+    let accCovered = opp.logistics_info?.accommodation_covered || "Not specified";
     let city = opp.role_info?.city || opp.location || "Tunisia";
     
     let startDate = "TBD";
@@ -133,13 +120,13 @@ async function fetchOpps() {
       "#SLOTS": opp.openings || 0,
       "Location": city,
       "Duration": opp.duration || "N/A",
-      "DriveId": driveFolderIds[opp.title] || null // additional useful detail
+      "Programme": "Global Teacher"
     };
   });
 
   const path = require('path');
-  fs.writeFileSync(path.join(__dirname, 'frozen_opportunities.json'), JSON.stringify(mappedData, null, 2));
-  console.log(`Success! Fetched and froze ${mappedData.length} opportunities.`);
+  fs.writeFileSync(path.join(__dirname, 'frozen_gte_opportunities.json'), JSON.stringify(mappedData, null, 2));
+  console.log(`Success! Fetched and froze ${mappedData.length} GTe opportunities.`);
 }
 
-fetchOpps();
+fetchGTeOpps();

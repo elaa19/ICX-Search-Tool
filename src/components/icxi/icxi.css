@@ -41,6 +41,14 @@
     object-fit: contain;
     margin-bottom: 1rem;
   }
+
+  .gte-cardi {
+    border-top: 3px solid #E4405F;
+  }
+
+  .gte-cardi-img {
+    filter: hue-rotate(330deg) saturate(1.3);
+  }
   
   .cardi-title {
     font-size: 1.2rem;
