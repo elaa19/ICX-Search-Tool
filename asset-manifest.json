@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ICX-Search-Tool/static/css/main.45d85a0e.css",
-    "main.js": "/ICX-Search-Tool/static/js/main.033d5941.js",
+    "main.css": "/ICX-Search-Tool/static/css/main.80de82e4.css",
+    "main.js": "/ICX-Search-Tool/static/js/main.0502fd9c.js",
     "static/js/488.9c92ff38.chunk.js": "/ICX-Search-Tool/static/js/488.9c92ff38.chunk.js",
     "static/media/travller.png": "/ICX-Search-Tool/static/media/travller.d6147572657f5b88776a.png",
     "static/media/Image.png": "/ICX-Search-Tool/static/media/Image.797de9b6aa78b4f0b6a9.png",
@@ -17,16 +17,17 @@
     "static/media/aquatica.png": "/ICX-Search-Tool/static/media/aquatica.c3c1cb3370552ddae46c.png",
     "static/media/4.6_1 white.png": "/ICX-Search-Tool/static/media/4.6_1 white.d5274524cb3c8d5b2e44.png",
     "static/media/raiseyourvoice.png": "/ICX-Search-Tool/static/media/raiseyourvoice.e8b7b4eec2d6b8b90821.png",
+    "static/media/equify.png": "/ICX-Search-Tool/static/media/equify.3fff8988ecebff60d57b.png",
     "static/media/igvf.png": "/ICX-Search-Tool/static/media/igvf.4549fa1153762dd41720.png",
     "static/media/igtf.png": "/ICX-Search-Tool/static/media/igtf.b02b4a2d9fa58ed047ee.png",
     "static/media/aiesecl.png": "/ICX-Search-Tool/static/media/aiesecl.c032e27960b4a22535f6.png",
     "index.html": "/ICX-Search-Tool/index.html",
-    "main.45d85a0e.css.map": "/ICX-Search-Tool/static/css/main.45d85a0e.css.map",
-    "main.033d5941.js.map": "/ICX-Search-Tool/static/js/main.033d5941.js.map",
+    "main.80de82e4.css.map": "/ICX-Search-Tool/static/css/main.80de82e4.css.map",
+    "main.0502fd9c.js.map": "/ICX-Search-Tool/static/js/main.0502fd9c.js.map",
     "488.9c92ff38.chunk.js.map": "/ICX-Search-Tool/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45d85a0e.css",
-    "static/js/main.033d5941.js"
+    "static/css/main.80de82e4.css",
+    "static/js/main.0502fd9c.js"
   ]
 }
