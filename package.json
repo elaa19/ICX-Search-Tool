@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alaa19.github.io/ICX-Search-Tool",
+  "homepage": "https://elaa19.github.io/ICX-Search-Tool",
   "dependencies": {
     "cra-template": "1.2.0",
     "papaparse": "^5.5.2",
