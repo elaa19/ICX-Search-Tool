@@ -1,0 +1,44 @@
+[
+  {
+    "ID": "1335060",
+    "PROJECT": "Marketing",
+    "Start date": "2026-06-01",
+    "End date": "2026-07-15",
+    "Accomodation Provided": "provided",
+    "Accomodation Covered": "not_covered",
+    "Fee (€)": {
+      "fee": 0,
+      "currency": "TND"
+    },
+    "#SLOTS": 1,
+    "Location": "Ariana, Tunisie",
+    "Duration": "N/A",
+    "Programme": "Global Talent",
+    "Salary": {
+      "amount": 500,
+      "periodicity": "per month",
+      "currency": "TND"
+    }
+  },
+  {
+    "ID": "1334972",
+    "PROJECT": "Administration",
+    "Start date": "2026-06-01",
+    "End date": "2026-09-01",
+    "Accomodation Provided": "provided",
+    "Accomodation Covered": "covered",
+    "Fee (€)": {
+      "fee": 0,
+      "currency": "TND"
+    },
+    "#SLOTS": 169,
+    "Location": "Tunis, Tunisie",
+    "Duration": "N/A",
+    "Programme": "Global Talent",
+    "Salary": {
+      "amount": 100,
+      "periodicity": "per month",
+      "currency": "TND"
+    }
+  }
+]

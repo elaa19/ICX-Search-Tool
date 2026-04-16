@@ -1,0 +1,23 @@
+[
+  {
+    "message": "Field 'accommodation_provided' doesn't exist on type 'SpecificInfoType'",
+    "locations": [
+      {
+        "line": 16,
+        "column": 15
+      }
+    ],
+    "path": [
+      "query",
+      "opportunities",
+      "data",
+      "specifics_info",
+      "accommodation_provided"
+    ],
+    "extensions": {
+      "code": "undefinedField",
+      "typeName": "SpecificInfoType",
+      "fieldName": "accommodation_provided"
+    }
+  }
+]

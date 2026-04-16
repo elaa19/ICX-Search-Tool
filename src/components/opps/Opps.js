@@ -1,23 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./opps.css";
 import Heart from "./assets/3.4 white 1.png";
 import Fingerprint from "./assets/4.4 white 1.png";
 import Classroom from "./assets/4.6_1 white.png";
 import Skillup from "./assets/8.6 white.png";
 import Onthemap from "./assets/8.9 white.png";
-import Scaleup from "./assets/scaleup.png";
-import Greenleader from "./assets/greenleaders.png";
-import Youthforimpact from "./assets/youthforimpact.png";
-import Raiseyourvoice from "./assets/raiseyourvoice.png";
-
-import oppsData from "../../data/opps_data.json";
+import Igvf from "../icxi/assets/igvf.png";
+import Igtf from "../icxi/assets/igtf.png";
+import GreenLeaderImage from "./assets/greenleaders.png";
+import RaiseYourVoiceImage from "./assets/raiseyourvoice.png";
+import ScaleUpImage from "./assets/scaleup.png";
+import YouthForImpactImage from "./assets/youthforimpact.png";
+import frozenGVData from "./frozen_opportunities.json";
+import frozenGTData from "./frozen_gt_opportunities.json";
+import frozenGTeData from "./frozen_gte_opportunities.json";
 
 const Opps = () => {
-  const [data, setData] = useState([]);
+  const [activeTab, setActiveTab] = useState("gv");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    setData(oppsData);
-  }, []);
+  const gvData = frozenGVData;
+  const gtData = frozenGTData;
+  const gteData = frozenGTeData;
+
+  const getActiveData = () => {
+    switch (activeTab) {
+      case "gt": return gtData;
+      case "gte": return gteData;
+      default: return gvData;
+    }
+  };
+
+  const data = getActiveData();
 
   const opportunityImages = {
     "Hearltbeat": Heart,
@@ -25,114 +39,215 @@ const Opps = () => {
     "Global Classroom": Classroom,
     "Skill Up!": Skillup,
     "On the Map": Onthemap,
-    "Green Leader": Greenleader,
-    "Raise your voice": Raiseyourvoice,
-    "Scale-up": Scaleup,
-    "Youth for impact": Youthforimpact,
-  };  // Mapping des noms de projets (clé = valeur de opportunity.PROJECT) vers les IDs des dossiers Drive
+    "Scale-up": ScaleUpImage,
+    "Green Leader": GreenLeaderImage,
+    "Raise your voice": RaiseYourVoiceImage,
+    "Youth for impact": YouthForImpactImage,
+  };
+
   const driveFolderIds = {
-    "Hearltbeat": "1d8CaX5AquzX32gV2SZsX88aw_iuNBPp6",   // Heartbeat
-    "Fingerprint": "11OWnuuw5mnwsyyru-BmiPreYkHEc_7go", // Finger Print
+    "Hearltbeat": "1d8CaX5AquzX32gV2SZsX88aw_iuNBPp6",
+    "Fingerprint": "11OWnuuw5mnwsyyru-BmiPreYkHEc_7go",
     "Global Classroom": "1Zw4aAqMqU3uIFwPd4GsV2q63w1Kzg3G6",
-    "Skill Up!": "1Uv-oVlphxa5rFZxX-ODrwwL4py9key1Q",   // Skill-up
-    "On the Map": "1l_co24o4f7pK3qqoq6sGsNcG0IobVWRC",  // On the map
+    "Skill Up!": "1Uv-oVlphxa5rFZxX-ODrwwL4py9key1Q",
+    "On the Map": "1l_co24o4f7pK3qqoq6sGsNcG0IobVWRC",
     "Green Leader": "15D5AcrM53Ua0wT-0EhCtp9qVjrH1rGyv",
     "Raise your voice": "1s5ql3MgeB5SyMNQlwvMi4zp-IaH4eG5K",
     "Scale-up": "1SYGsBb_YPInpmDXorNYdKFUYdTd-S-I4",
     "Youth for impact": "1RYl1zLp4ZlCEEmM15sL2WezBZzDEA-WQ"
   };
 
+  // Filter opportunities based on search term
+  const filteredData = data.filter((opportunity) => {
+    const term = searchTerm.toLowerCase();
+    if (!term) return true;
+    const project = (opportunity.PROJECT || "").toLowerCase();
+    const location = (opportunity.Location || "").toLowerCase();
+    return project.includes(term) || location.includes(term);
+  });
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setSearchTerm("");
+  };
+
+  const getLearnMorePath = () => {
+    switch (activeTab) {
+      case "gt": return "global-talent";
+      case "gte": return "global-teacher";
+      default: return "global-volunteer";
+    }
+  };
+
+  const getSearchPlaceholder = () => {
+    switch (activeTab) {
+      case "gt": return "talent";
+      case "gte": return "teaching";
+      default: return "volunteer";
+    }
+  };
+
+  const getFallbackImage = () => {
+    switch (activeTab) {
+      case "gt": return Igtf;
+      case "gte": return Igtf;
+      default: return Igvf;
+    }
+  };
+
+  const renderCard = (opportunity, index) => {
+    const rawProjectName = opportunity.PROJECT;
+    let projectName = rawProjectName.replace(/\s*\[.*?\]\s*$/, "").trim();
+
+    let mapKey = projectName;
+    if (projectName.toLowerCase() === "heartbeat") mapKey = "Hearltbeat";
+    if (projectName.toLowerCase() === "scale up!") mapKey = "Scale-up";
+    if (projectName.toLowerCase() === "green leaders") mapKey = "Green Leader";
+    if (projectName.toLowerCase() === "youth 4 impact" || projectName.toLowerCase() === "youth for impact") mapKey = "Youth for impact";
+    if (projectName.toLowerCase() === "raise your voice") mapKey = "Raise your voice";
+    if (projectName.toLowerCase() === "on the map") mapKey = "On the Map";
+
+    const driveId = driveFolderIds[mapKey] || driveFolderIds[projectName];
+    const driveUrl = driveId ? `https://drive.google.com/drive/folders/${driveId}` : null;
+
+    const fallbackImage = getFallbackImage();
+    const learnMorePath = getLearnMorePath();
+
+    const cardClass = activeTab === "gt" ? "gt-card" : activeTab === "gte" ? "gte-card" : "";
+    const linkClass = activeTab === "gt" ? "gt-link" : activeTab === "gte" ? "gte-link" : "";
+
+    // Format salary
+    const salary = opportunity.Salary;
+    let salaryDisplay = null;
+    if (salary) {
+      const period = salary.periodicity ? `/${salary.periodicity}` : "";
+      salaryDisplay = `${salary.amount} ${salary.currency}${period}`;
+    }
+
+    return (
+      <div className={`opportunity-card ${cardClass}`} key={`${opportunity.ID}-${index}`}>
+        <img
+          src={opportunityImages[mapKey] || opportunityImages[projectName] || fallbackImage}
+          alt={rawProjectName}
+          className={`opportunity-image ${activeTab === "gte" ? "gte-image" : ""}`}
+        />
+        <h3>{rawProjectName}</h3>
+        {opportunity["Location"] && (
+          <p><strong>Location:</strong> {opportunity["Location"]}</p>
+        )}
+        {activeTab === "gv" && opportunity["Accomodation Provided"] && opportunity["Accomodation Provided"] !== "Not specified" && (
+          <p><strong>Accommodation:</strong> {opportunity["Accomodation Provided"]}</p>
+        )}
+        {activeTab === "gv" && (
+          <p><strong>Fee:</strong> {opportunity["Fee (€)"]?.fee !== undefined ? `${opportunity["Fee (€)"].fee} ${opportunity["Fee (€)"].currency}` : opportunity["Fee (€)"]}</p>
+        )}
+        {(activeTab === "gt" || activeTab === "gte") && salaryDisplay && (
+          <p><strong>💰 Salary:</strong> <span className="salary-value">{salaryDisplay}</span></p>
+        )}
+        <p><strong>Slots:</strong> {opportunity["#SLOTS"]}</p>
+        {opportunity["Duration"] && opportunity["Duration"] !== "N/A" && (
+          <p><strong>Duration:</strong> {opportunity["Duration"]} weeks</p>
+        )}
+        <div className="button-container">
+          <a
+            href={`https://aiesec.org/opportunity/${learnMorePath}/${opportunity["ID"]}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`opportunity-link ${linkClass}`}
+          >
+            Learn More
+          </a>
+          {driveUrl && (
+            <a
+              href={driveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="drive-link"
+            >
+              Booklet
+            </a>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       <section className="opportunities" id="opportunities">
         <h2>Opportunities</h2>
+
+        {/* Tabs */}
+        <div className="opps-tabs">
+          <button
+            className={`opps-tab ${activeTab === "gv" ? "opps-tab-active" : ""}`}
+            onClick={() => handleTabChange("gv")}
+            id="tab-gv"
+          >
+            <img src={Igvf} alt="GV" className="tab-icon" />
+            <span>Global Volunteer</span>
+            <span className="tab-count">{gvData.length}</span>
+          </button>
+          <button
+            className={`opps-tab ${activeTab === "gt" ? "opps-tab-active opps-tab-gt-active" : ""}`}
+            onClick={() => handleTabChange("gt")}
+            id="tab-gt"
+          >
+            <img src={Igtf} alt="GT" className="tab-icon" />
+            <span>Global Talent</span>
+            <span className="tab-count">{gtData.length}</span>
+          </button>
+          <button
+            className={`opps-tab ${activeTab === "gte" ? "opps-tab-active opps-tab-gte-active" : ""}`}
+            onClick={() => handleTabChange("gte")}
+            id="tab-gte"
+          >
+            <img src={Igtf} alt="GTe" className="tab-icon gte-tab-icon" />
+            <span>Global Teacher</span>
+            <span className="tab-count">{gteData.length}</span>
+          </button>
+        </div>
+
+        {/* Search Bar */}
+        <div className="search-container">
+          <div className="search-wrapper">
+            <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              className="search-input"
+              placeholder={`Search ${getSearchPlaceholder()} opportunities...`}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              id="opportunity-search"
+            />
+            {searchTerm && (
+              <button className="search-clear" onClick={() => setSearchTerm("")} aria-label="Clear search">
+                ✕
+              </button>
+            )}
+          </div>
+          {searchTerm && (
+            <p className="search-results-count">
+              {filteredData.length} {filteredData.length === 1 ? "opportunity" : "opportunities"} found
+            </p>
+          )}
+        </div>
+
         <div className="opportunity-cards">
-          {data.map((opportunity, index) => {
-            // Determine project type based on title for the image/folder mapping
-            let projectKey = "Hearltbeat"; // Default
-            const titleUpper = opportunity.title ? opportunity.title.toUpperCase() : "";
-            
-            if (titleUpper.includes("HEARTBEAT") || titleUpper.includes("HEART BEAT")) {
-               projectKey = "Hearltbeat";
-            } else if (titleUpper.includes("FINGERPRINT") || titleUpper.includes("FINGER PRINT")) {
-               projectKey = "Fingerprint";
-            } else if (titleUpper.includes("GLOBAL CLASSROOM")) {
-               projectKey = "Global Classroom";
-            } else if (titleUpper.includes("SKILL") && titleUpper.includes("UP")) {
-               projectKey = "Skill Up!";
-            } else if (titleUpper.includes("ON THE MAP") || titleUpper.includes("MAP")) {
-               projectKey = "On the Map";
-            } else if (titleUpper.includes("GREEN LEADER")) {
-               projectKey = "Green Leader";
-            } else if (titleUpper.includes("RAISE") && titleUpper.includes("VOICE")) {
-               projectKey = "Raise your voice";
-            } else if (titleUpper.includes("SCALE") && titleUpper.includes("UP")) {
-               projectKey = "Scale-up";
-            } else if (titleUpper.includes("YOUTH") && titleUpper.includes("IMPACT")) {
-               projectKey = "Youth for impact";
-            }
-
-            const driveId = driveFolderIds[projectKey];
-            const driveUrl = driveId ? `https://drive.google.com/drive/folders/${driveId}` : null;
-
-            // Extract correct start, end dates and duration from available_slots or title
-            let startDate = "N/A";
-            let endDate = "N/A";
-            if (opportunity.available_slots && opportunity.available_slots.length > 0) {
-              startDate = new Date(opportunity.available_slots[0].start_date).toLocaleDateString();
-              endDate = new Date(opportunity.available_slots[0].end_date).toLocaleDateString();
-            }
-
-            // Extract duration from title (e.g., "[6 weeks]")
-            let duration = "N/A";
-            const durationMatch = opportunity.title ? opportunity.title.match(/\[(\d+)\s+week/i) : null;
-            if (durationMatch && durationMatch[1]) {
-              duration = durationMatch[1];
-            }
-
-            return (
-              <div className="opportunity-card" key={index}>
-                <img
-                  src={opportunityImages[projectKey] || Heart}
-                  alt={opportunity.title}
-                  className="opportunity-image"
-                />
-                <h3>{opportunity.title}</h3>
-                <p><strong>Location:</strong> {opportunity.location}</p>
-                <p><strong>Duration:</strong> {duration} weeks</p>
-                <p><strong>Start Date:</strong> {startDate}</p>
-                <p><strong>End Date:</strong> {endDate}</p>
-                <p><strong>Slots:</strong> {opportunity.openings}</p>
-                <p><strong>Accommodation:</strong> Provided and Covered</p>
-
-                <div className="button-container">
-                  <a
-                    href={`https://aiesec.org/opportunity/global-volunteer/${opportunity.id}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="opportunity-link"
-                  >
-                    Learn More
-                  </a>
-
-                  {driveUrl && (
-                    <a
-                      href={driveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="drive-link"
-                    >
-                      Booklet 
-                    </a>
-                  )}
-                </div>
-              </div>
-            );
-          })}
+          {filteredData.length === 0 ? (
+            <div className="no-results">
+              <p>No opportunities match your search.</p>
+              <button className="search-reset-btn" onClick={() => setSearchTerm("")}>Show all opportunities</button>
+            </div>
+          ) : (
+            filteredData.map((opportunity, index) => renderCard(opportunity, index))
+          )}
         </div>
       </section>
     </div>
   );
 };
-
 export default Opps;
